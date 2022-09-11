@@ -7,29 +7,22 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * 拦截器的三个方法：
- * preHandle()：在控制器方法执行之前执行，其返回值表示对控制器方法的拦截(false)或放行(true)
- * postHandle()：在控制器方法执行之后执行
- * afterCompletion()：在控制器方法执行之后，且视图渲染完毕之后执行
- *
- * 
- */
+
 @Component
-public class FirstInterceptor implements HandlerInterceptor {
+public class SecondInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("FirstInterceptor-->preHandle");
-        return true;
+        System.out.println("SecondInterceptor-->preHandle");
+        return false;
     }
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        System.out.println("FirstInterceptor-->postHandle");
+        System.out.println("SecondInterceptor-->postHandle");
     }
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        System.out.println("FirstInterceptor-->afterCompletion");
+        System.out.println("SecondInterceptor-->afterCompletion");
     }
 }

@@ -51,6 +51,10 @@
 
     <!--配置视图控制器-->
     <mvc:view-controller path="/" view-name="index"></mvc:view-controller>
-    <mvc:view-controller path="/to/add" view-name="employee_add"></mvc:view-controller>
+
+    <!--配置文件上传解析器-->
+    <bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+    </bean>
 
 </beans>

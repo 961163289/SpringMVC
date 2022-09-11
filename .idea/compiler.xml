@@ -7,11 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_mvc_demo" />
+        <module name="spring_mvc_extension" />
+        <module name="spring_mvc-rest" />
+        <module name="spring_mvc_ajax" />
         <module name="spring_mvc_helloworld" />
+        <module name="spring_mvc_annotation" />
+        <module name="spring_mvc_rest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="SSM" target="1.8" />
+      <module name="SpringMVC" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
